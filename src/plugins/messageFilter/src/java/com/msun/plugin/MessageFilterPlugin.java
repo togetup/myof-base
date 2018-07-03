@@ -43,14 +43,18 @@ public class MessageFilterPlugin implements Plugin, PacketInterceptor {
 	public void interceptPacket(Packet packet, Session session, boolean incoming, boolean processed)
 			throws PacketRejectedException {
 		
-		if (packet instanceof Message) {
-			Message msg = (Message)packet;
-			
-			log.info("session:" + session.getAddress() 
-				+ " incoming:" + incoming
-				+ " processed:" + processed);
-			
-			log.info("message body:" + msg.getBody());
+		if (incoming && !processed) {
+			if (packet instanceof Message) {
+				Message msg = (Message)packet;
+				String body = msg.getBody();
+				
+				if (body!=null && body.contains("fuck")) {
+					PacketRejectedException rejectException = new PacketRejectedException();
+					rejectException.setRejectionMessage("fuck is error");
+					throw rejectException;
+				}				
+			}		
 		}		
+		
 	}	
 }
