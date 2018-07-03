@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Plugin configuration for the broadcast plugin.
+-->
+<plugin>
+    <class>com.msun.plugin.MessageFilterPlugin</class>
+    <name>过滤插件</name>
+    <description>过滤一些脏话</description>
+    <author>Jim</author>
+    <version>0.0.1</version>
+    <date>7/3/2018</date>
+    <url>http://www.igniterealtime.org</url>
+    <minServerVersion>3.10.3</minServerVersion>
+</plugin>
