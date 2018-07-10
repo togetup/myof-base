@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Plugin configuration for the broadcast plugin.
+-->
+<plugin>
+    <class>com.msun.plugin.OfflineMessagePlugin</class>
+    <name>离线消息插件</name>
+    <description>处理离线消息</description>
+    <author>Jim</author>
+    <version>0.0.1</version>
+    <date>7/10/2018</date>
+    <url>http://www.igniterealtime.org</url>
+    <minServerVersion>3.10.3</minServerVersion>
+</plugin>
